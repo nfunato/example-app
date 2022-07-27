@@ -27,4 +27,11 @@ class CreateRequest extends FormRequest
             'todo' => 'required|max:100'
         ];
     }
+
+    public function todo(): string
+    {
+        // really the content means 'todo-content', not 'todo',
+        // specified in index.blade.php
+        return $this->input('todo');
+    }
 }
