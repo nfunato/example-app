@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0,
-            user_scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport"
+        content="width=device-width, user_scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Todo管理</title>
 </head>
 
@@ -31,7 +31,13 @@
     <div>
         <p>タスクリスト</p>
         @foreach ($todos as $todo)
-        <p>{{ $todo->task }}</p>
+        <!-- <p>{{ $todo->task }}</p> -->
+        <details>
+            <summary>{{ $todo->task }}</summary>
+            <div>
+                <a href="{{ route('todo.update.index', ['todoId' => $todo->id]) }}">編集</a>
+            </div>
+        </details>
         @endforeach
     </div>
 

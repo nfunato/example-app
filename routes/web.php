@@ -25,3 +25,9 @@ Route::post('/todo/create', \App\Http\Controllers\Todo\CreateController::class)
 
 Route::post('/todo/create', \App\Http\Controllers\Todo\CreateController::class)
     ->name('todo.create');
+
+Route::get('/todo/update/{todoId}', \App\Http\Controllers\Todo\Update\IndexController::class)
+    ->name('todo.update.index');
+
+Route::put('/todo/update/{todoId}', \App\Http\Controllers\Todo\Update\PutController::class)
+    ->name('todo.update.put');
