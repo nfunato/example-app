@@ -31,3 +31,6 @@ Route::get('/todo/update/{todoId}', \App\Http\Controllers\Todo\Update\IndexContr
 
 Route::put('/todo/update/{todoId}', \App\Http\Controllers\Todo\Update\PutController::class)
     ->name('todo.update.put');
+
+Route::delete('/todo/delete/{todoId}', \App\Http\Controllers\Todo\DeleteController::class)
+    ->name('todo.delete');

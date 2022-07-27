@@ -16,6 +16,9 @@
     <hr style="margin-left:0; width: 50%;" />
     <div>
         <p>新規タスク</p>
+        @if (session('feedback.success'))
+        <p style="color: green">{{ session('feedback.success') }}</p>
+        @endif
         <form action="{{ route('todo.create') }}" method="post">
             @csrf
             <label for="todo-content">タスク入力</label>
@@ -36,6 +39,11 @@
             <summary>{{ $todo->task }}</summary>
             <div>
                 <a href="{{ route('todo.update.index', ['todoId' => $todo->id]) }}">編集</a>
+                <form action="{{ route('todo.delete', ['todoId' => $todo->id]) }}" method="post">
+                    @method('DELETE')
+                    @csrf
+                    <button type="submit">削除</button>
+                </form>
             </div>
         </details>
         @endforeach
