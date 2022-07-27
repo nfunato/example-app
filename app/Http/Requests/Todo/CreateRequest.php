@@ -24,7 +24,7 @@ class CreateRequest extends FormRequest
     public function rules()
     {
         return [
-            'task' => 'required|max:100'
+            'todo' => 'required|max:100'
         ];
     }
 }

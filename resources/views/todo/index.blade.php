@@ -18,9 +18,9 @@
         <p>新規タスク</p>
         <form action="{{ route('todo.create') }}" method="post">
             @csrf
-            <label for="task">タスク入力</label>
+            <label for="todo-content">タスク入力</label>
             <span>100文字まで</span>
-            <textarea id="task" type="text" name="todo" placeholder="タスクを入力"></textarea>
+            <textarea id="todo-content" type="text" name="todo" placeholder="タスクを入力"></textarea>
             <button type="submit">追加</button>
             @error('todo')
             <p style="color: red;">{{ $message }}</p>
