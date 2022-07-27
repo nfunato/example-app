@@ -19,6 +19,7 @@ class IndexController extends Controller
     {
         $todoId = (int)$request->route('todoId');
         $todo = Todo::where('id', $todoId)->firstOrFail();
+        // $todo->deadline = $request->deadline();
         // dd($todos);
         return view('todo.update')->with('todo', $todo);
     }
