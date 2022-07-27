@@ -16,3 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/todo', \App\Http\Controllers\Todo\IndexController::class)
+    ->name('todo.index');
+
+Route::post('/todo/create', \App\Http\Controllers\Todo\CreateController::class)
+    ->name('todo.index');
+
+Route::post('/todo/create', \App\Http\Controllers\Todo\CreateController::class)
+    ->name('todo.create');

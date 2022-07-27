@@ -82,7 +82,8 @@ return [
     |
     */
 
-    'locale' => 'en',
+//  'locale' => 'en',
+    'locale' => 'jp',
 
     /*
     |--------------------------------------------------------------------------
@@ -95,7 +96,8 @@ return [
     |
     */
 
-    'fallback_locale' => 'en',
+//  'fallback_locale' => 'en',
+    'fallback_locale' => 'jp',
 
     /*
     |--------------------------------------------------------------------------
@@ -108,7 +110,9 @@ return [
     |
     */
 
+// current MySQL terminal connection for my Docker image is not localized
     'faker_locale' => 'en_US',
+//  'faker_locale' => 'ja_JP',
 
     /*
     |--------------------------------------------------------------------------
