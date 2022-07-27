@@ -17,9 +17,9 @@ class CreateController extends Controller
      */
     public function __invoke(CreateRequest $request)
     {
-        // as for $request->todo(), cf. the comment in CreateRequest.php
         $todo = new Todo;
         $todo->task = $request->todo();
+        $todo->deadline = $request->deadline();
         $todo->save();
         return redirect()->route('todo.index');
     }

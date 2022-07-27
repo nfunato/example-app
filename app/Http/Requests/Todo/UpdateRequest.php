@@ -37,4 +37,16 @@ class UpdateRequest extends FormRequest
     {
         return (int) $this->route('todoId');
     }
+
+    public function deadline()
+    {
+        return $this->input('deadline');
+    }
+
+    /*
+    public function edit()
+    {
+        return $this->input('edit');
+    }
+    */
 }

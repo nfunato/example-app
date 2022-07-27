@@ -16,8 +16,11 @@ class IndexController extends Controller
      */
     public function __invoke(Request $request)
     {
-        // orderBy('deadline', 'ASC')->get()
-        $todos = Todo::orderBy('created_at', 'DESC')->get();
+        // $todos = Todo::orderBy('deadline', 'DESC')->get();
+        // $todos = Todo::orderBy('created_at', 'ASC')->get();
+        // $todos = Todo::all()->sortByDesc('created_at');
+        $todos = Todo::all()->sortBy('created_at');
+        // dd($todos);
         return view('todo.index')
             ->with('name', 'Powered by laravel9')
             ->with('todos', $todos);

@@ -30,8 +30,11 @@ class CreateRequest extends FormRequest
 
     public function todo(): string
     {
-        // really the content means 'todo-content', not 'todo',
-        // specified in index.blade.php
         return $this->input('todo');
+    }
+
+    public function deadline()
+    {
+        return $this->input('deadline');
     }
 }

@@ -21,6 +21,6 @@ class DeleteController extends Controller
         $todo->delete();
         return redirect()
             ->route('todo.index')
-            ->with('feed ack.success', "削除しました");
+            ->with('feed ack.success', "削除しました");  // where we can look this?
     }
 }
